@@ -6,7 +6,11 @@ const Hero = () => {
       <div className="hero-content">
         <h1>Welcome to Airport View Hotel</h1>
         <p>A blend of Cosmopolitan Serenity</p>
-        <a href="#book" className="btn">Book Your Stay</a>
+        <div className="hero-btn-group">
+          <a href="#book" className="btn">Book Your Stay</a>
+          <a href="/login" className="btn btn-outline">Login</a>
+          <a href="/signup" className="btn btn-outline">Sign Up</a>
+        </div>
       </div>
       <div className="hero-overlay"></div>
     </section>

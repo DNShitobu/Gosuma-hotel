@@ -155,53 +155,34 @@ const Booking = () => {
     ? Math.ceil((new Date(formData.checkOut) - new Date(formData.checkIn)) / (1000 * 60 * 60 * 24))
     : 0;
 
-  if (step === 3 && bookingResult) {
-    return (
-      <section className="booking" id="book">
-        <div className="container">
-          <div className="booking-box booking-success">
-            <div className="success-icon">✓</div>
-            <h2>Booking Confirmed!</h2>
-            <p className="booking-id">Booking ID: {bookingResult.id}</p>
-            <div className="booking-summary">
-              <p><strong>Check-in:</strong> {bookingResult.checkIn}</p>
-              <p><strong>Check-out:</strong> {bookingResult.checkOut}</p>
-              <p><strong>Total:</strong> {format(bookingResult.totalPrice)}</p>
-              <p><strong>Status:</strong> {bookingResult.status}</p>
-            </div>
-            <p className="success-message">
-              A confirmation email has been sent to {bookingResult.guestEmail}
-            </p>
-            <button className="btn" onClick={() => {
-              setStep(1);
-              setFormData({
-                checkIn: '',
-                checkOut: '',
-                guests: '1',
-                roomId: '',
-                guestName: '',
-                guestEmail: '',
-                guestPhone: '',
-                specialRequests: ''
-              });
-              setBookingResult(null);
-            }}>
-              Make Another Booking
-            </button>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section className="booking" id="book">
       <div className="container">
+        <h2 className="booking-title">Book Your Perfect Stay</h2>
+        
+        {/* Step Indicator */}
+        <div className="booking-steps">
+          <div className={`step ${step >= 1 ? 'active' : ''} ${step > 1 ? 'completed' : ''}`}>
+            <div className="step-number">1</div>
+            <div className="step-label">Details</div>
+          </div>
+          <div className="step-line"></div>
+          <div className={`step ${step >= 2 ? 'active' : ''} ${step > 2 ? 'completed' : ''}`}>
+            <div className="step-number">2</div>
+            <div className="step-label">Guest Info</div>
+          </div>
+          <div className="step-line"></div>
+          <div className={`step ${step >= 3 ? 'active' : ''}`}>
+            <div className="step-number">3</div>
+            <div className="step-label">Confirm</div>
+          </div>
+        </div>
+        
         <div className="booking-box">
-          <h2>{step === 1 ? 'Book Your Stay' : 'Guest Details'}</h2>
-          
           {step === 1 && (
-            <>
+            <div className="step-content">
+              <h3>When are you planning to stay?</h3>
+              
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="checkIn">Check In</label>
@@ -214,7 +195,7 @@ const Booking = () => {
                     onChange={handleChange}
                     aria-invalid={!!errors.checkIn}
                   />
-                  {errors.checkIn && <span className="error">{errors.checkIn}</span>}
+                  {errors.checkIn && <span className="error-message">{errors.checkIn}</span>}
                 </div>
                 <div className="form-group">
                   <label htmlFor="checkOut">Check Out</label>
@@ -227,7 +208,7 @@ const Booking = () => {
                     onChange={handleChange}
                     aria-invalid={!!errors.checkOut}
                   />
-                  {errors.checkOut && <span className="error">{errors.checkOut}</span>}
+                  {errors.checkOut && <span className="error-message">{errors.checkOut}</span>}
                 </div>
                 <div className="form-group">
                   <label htmlFor="guests">Guests</label>
@@ -245,114 +226,219 @@ const Booking = () => {
                 </div>
               </div>
 
-              <div className="form-group">
-                <label htmlFor="roomId">Select Room</label>
-                <select 
-                  id="roomId"
-                  name="roomId"
-                  value={formData.roomId}
-                  onChange={handleChange}
-                  aria-invalid={!!errors.roomId}
-                >
-                  <option value="">-- Select a Room --</option>
+              <div className="form-group full-width">
+                <label htmlFor="roomId">Select Your Room</label>
+                <div className="rooms-grid">
                   {rooms.map(room => (
-                    <option key={room.id} value={room.id}>
-                      {room.name} - From {format(room.price)}/night ({room.available} available)
-                    </option>
+                    <div 
+                      key={room.id} 
+                      className={`room-card ${formData.roomId === String(room.id) ? 'selected' : ''}`}
+                      onClick={() => {
+                        setFormData(prev => ({ ...prev, roomId: String(room.id) }));
+                        if (errors.roomId) {
+                          setErrors(prev => ({ ...prev, roomId: '' }));
+                        }
+                      }}
+                    >
+                      <div className="room-card-header">
+                        <h4>{room.name}</h4>
+                        <div className="room-price">{format(room.price)}<span>/night</span></div>
+                      </div>
+                      <p className="room-type">{room.type}</p>
+                      <p className="room-available">
+                        <span className="badge">{room.available} available</span>
+                      </p>
+                      <div className="room-card-footer">
+                        <input 
+                          type="radio" 
+                          name="roomId" 
+                          value={room.id}
+                          checked={formData.roomId === String(room.id)}
+                          onChange={() => {}}
+                        />
+                        <span>Select</span>
+                      </div>
+                    </div>
                   ))}
-                </select>
-                {errors.roomId && <span className="error">{errors.roomId}</span>}
+                </div>
+                {errors.roomId && <span className="error-message">{errors.roomId}</span>}
               </div>
 
               {selectedRoom && nights > 0 && (
-                <div className="price-summary">
-                  <p><strong>Room:</strong> {selectedRoom.name}</p>
-                  <p><strong>{nights} night{nights > 1 ? 's' : ''}:</strong> {format(selectedRoom.price * nights)}</p>
+                <div className="price-preview">
+                  <div className="price-preview-row">
+                    <span>{selectedRoom.name}</span>
+                    <strong>{format(selectedRoom.price)}/night</strong>
+                  </div>
+                  <div className="price-preview-row">
+                    <span>×{nights} night{nights > 1 ? 's' : ''}</span>
+                    <strong>{format(selectedRoom.price * nights)}</strong>
+                  </div>
+                  <div className="price-preview-total">
+                    <span>Total</span>
+                    <strong>{format(selectedRoom.price * nights)}</strong>
+                  </div>
                 </div>
               )}
 
-              <button className="btn" onClick={handleNext} disabled={loading}>
-                {loading ? 'Processing...' : 'Continue'}
+              <button className="btn btn-primary" onClick={handleNext} disabled={loading}>
+                {loading ? 'Processing...' : 'Continue to Guest Info'}
               </button>
-            </>
+            </div>
           )}
 
           {step === 2 && (
-            <>
-              <div className="form-group">
-                <label htmlFor="guestName">Full Name</label>
-                <input 
-                  type="text"
-                  id="guestName"
-                  name="guestName"
-                  value={formData.guestName}
-                  onChange={handleChange}
-                  aria-invalid={!!errors.guestName}
-                  placeholder="Enter your full name"
-                />
-                {errors.guestName && <span className="error">{errors.guestName}</span>}
+            <div className="step-content">
+              <h3>Tell us about yourself</h3>
+              
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="guestName">Full Name</label>
+                  <input 
+                    type="text"
+                    id="guestName"
+                    name="guestName"
+                    value={formData.guestName}
+                    onChange={handleChange}
+                    aria-invalid={!!errors.guestName}
+                    placeholder="John Doe"
+                  />
+                  {errors.guestName && <span className="error-message">{errors.guestName}</span>}
+                </div>
+                <div className="form-group">
+                  <label htmlFor="guestEmail">Email Address</label>
+                  <input 
+                    type="email"
+                    id="guestEmail"
+                    name="guestEmail"
+                    value={formData.guestEmail}
+                    onChange={handleChange}
+                    aria-invalid={!!errors.guestEmail}
+                    placeholder="john@example.com"
+                  />
+                  {errors.guestEmail && <span className="error-message">{errors.guestEmail}</span>}
+                </div>
               </div>
 
-              <div className="form-group">
-                <label htmlFor="guestEmail">Email Address</label>
-                <input 
-                  type="email"
-                  id="guestEmail"
-                  name="guestEmail"
-                  value={formData.guestEmail}
-                  onChange={handleChange}
-                  aria-invalid={!!errors.guestEmail}
-                  placeholder="Enter your email"
-                />
-                {errors.guestEmail && <span className="error">{errors.guestEmail}</span>}
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="guestPhone">Phone Number</label>
+                  <input 
+                    type="tel"
+                    id="guestPhone"
+                    name="guestPhone"
+                    value={formData.guestPhone}
+                    onChange={handleChange}
+                    aria-invalid={!!errors.guestPhone}
+                    placeholder="+1 (555) 123-4567"
+                  />
+                  {errors.guestPhone && <span className="error-message">{errors.guestPhone}</span>}
+                </div>
               </div>
 
-              <div className="form-group">
-                <label htmlFor="guestPhone">Phone Number</label>
-                <input 
-                  type="tel"
-                  id="guestPhone"
-                  name="guestPhone"
-                  value={formData.guestPhone}
-                  onChange={handleChange}
-                  aria-invalid={!!errors.guestPhone}
-                  placeholder="Enter your phone number"
-                />
-                {errors.guestPhone && <span className="error">{errors.guestPhone}</span>}
-              </div>
-
-              <div className="form-group">
+              <div className="form-group full-width">
                 <label htmlFor="specialRequests">Special Requests (Optional)</label>
                 <textarea
                   id="specialRequests"
                   name="specialRequests"
                   value={formData.specialRequests}
                   onChange={handleChange}
-                  placeholder="Any special requests?"
-                  rows="3"
+                  placeholder="Any special requests? Let us know..."
+                  rows="4"
                 />
               </div>
 
               {selectedRoom && nights > 0 && (
-                <div className="price-summary">
-                  <p><strong>Room:</strong> {selectedRoom.name}</p>
-                  <p><strong>Check-in:</strong> {formData.checkIn}</p>
-                  <p><strong>Check-out:</strong> {formData.checkOut}</p>
-                  <p><strong>{nights} night{nights > 1 ? 's' : ''}:</strong> {format(selectedRoom.price * nights)}</p>
+                <div className="booking-summary">
+                  <h4>Booking Summary</h4>
+                  <div className="summary-row">
+                    <span>Room:</span>
+                    <strong>{selectedRoom.name}</strong>
+                  </div>
+                  <div className="summary-row">
+                    <span>Check-in:</span>
+                    <strong>{new Date(formData.checkIn).toLocaleDateString()}</strong>
+                  </div>
+                  <div className="summary-row">
+                    <span>Check-out:</span>
+                    <strong>{new Date(formData.checkOut).toLocaleDateString()}</strong>
+                  </div>
+                  <div className="summary-row">
+                    <span>Duration:</span>
+                    <strong>{nights} night{nights > 1 ? 's' : ''}</strong>
+                  </div>
+                  <div className="summary-divider"></div>
+                  <div className="summary-row total">
+                    <span>Total Price:</span>
+                    <strong>{format(selectedRoom.price * nights)}</strong>
+                  </div>
                 </div>
               )}
 
-              {errors.submit && <div className="error submit-error">{errors.submit}</div>}
+              {errors.submit && <div className="error-box">{errors.submit}</div>}
 
               <div className="button-group">
                 <button className="btn btn-outline" onClick={handleBack} disabled={loading}>
-                  Back
+                  ← Back
                 </button>
-                <button className="btn" onClick={handleNext} disabled={loading}>
-                  {loading ? 'Processing...' : 'Confirm Booking'}
+                <button className="btn btn-primary" onClick={handleNext} disabled={loading}>
+                  {loading ? 'Processing...' : 'Confirm Booking →'}
                 </button>
               </div>
-            </>
+            </div>
+          )}
+
+          {step === 3 && bookingResult && (
+            <div className="step-content success-content">
+              <div className="success-icon">✓</div>
+              <h3>Booking Confirmed!</h3>
+              <p className="booking-id">Booking ID: <strong>{bookingResult.id}</strong></p>
+              
+              <div className="booking-summary">
+                <div className="summary-row">
+                  <span>Room:</span>
+                  <strong>{selectedRoom?.name}</strong>
+                </div>
+                <div className="summary-row">
+                  <span>Check-in:</span>
+                  <strong>{new Date(bookingResult.checkIn).toLocaleDateString()}</strong>
+                </div>
+                <div className="summary-row">
+                  <span>Check-out:</span>
+                  <strong>{new Date(bookingResult.checkOut).toLocaleDateString()}</strong>
+                </div>
+                <div className="summary-divider"></div>
+                <div className="summary-row total">
+                  <span>Total:</span>
+                  <strong>{format(bookingResult.totalPrice)}</strong>
+                </div>
+                <div className="summary-row">
+                  <span>Status:</span>
+                  <strong>{bookingResult.status}</strong>
+                </div>
+              </div>
+              
+              <p className="success-message">
+                A confirmation email has been sent to <strong>{bookingResult.guestEmail}</strong>
+              </p>
+
+              <button className="btn btn-primary" onClick={() => {
+                setStep(1);
+                setFormData({
+                  checkIn: '',
+                  checkOut: '',
+                  guests: '1',
+                  roomId: '',
+                  guestName: '',
+                  guestEmail: '',
+                  guestPhone: '',
+                  specialRequests: ''
+                });
+                setBookingResult(null);
+              }}>
+                Make Another Booking
+              </button>
+            </div>
           )}
         </div>
       </div>

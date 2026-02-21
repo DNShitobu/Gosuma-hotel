@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import './Admin.css';
 
 const API_URL = 'http://localhost:3001/api';
+const ADMIN_PASSWORD = 'gosuma2024!'; // Default admin password
 
 const Admin = () => {
   const [stats, setStats] = useState(null);
@@ -10,12 +11,17 @@ const Admin = () => {
   const [filter, setFilter] = useState('all');
   const [selectedBooking, setSelectedBooking] = useState(null);
 
+  const adminHeaders = {
+    'Content-Type': 'application/json',
+    'x-admin-password': ADMIN_PASSWORD
+  };
+
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
       const [statsRes, bookingsRes] = await Promise.all([
-        fetch(`${API_URL}/admin/stats`),
-        fetch(`${API_URL}/admin/bookings${filter !== 'all' ? `?status=${filter}` : ''}`)
+        fetch(`${API_URL}/admin/stats`, { headers: adminHeaders }),
+        fetch(`${API_URL}/admin/bookings${filter !== 'all' ? `?status=${filter}` : ''}`, { headers: adminHeaders })
       ]);
       
       const statsData = await statsRes.json();
@@ -38,7 +44,7 @@ const Admin = () => {
     try {
       const response = await fetch(`${API_URL}/admin/bookings/${bookingId}/status`, {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
+        headers: adminHeaders,
         body: JSON.stringify({ status: newStatus })
       });
 

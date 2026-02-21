@@ -55,6 +55,22 @@
       "totalCount": 21
     }
   ],
-  "bookings": [],
+  "bookings": [
+    {
+      "id": "52bd9182-9270-4f0b-aaaf-060ae8a0ff53",
+      "roomId": 1,
+      "guestName": "Mohammed Kamal-Deen Fuseini",
+      "guestEmail": "fuseinikamaldeen@gmail.com",
+      "guestPhone": "0547189152",
+      "checkIn": "2026-02-26",
+      "checkOut": "2026-02-28",
+      "guests": 1,
+      "totalPrice": 160,
+      "currency": "USD",
+      "status": "pending",
+      "specialRequests": null,
+      "createdAt": "2026-02-21T16:49:06.330Z"
+    }
+  ],
   "auditLog": []
 }

@@ -50,6 +50,29 @@
   color: var(--army-blue-dark);
 }
 
+/* Group hero buttons horizontally with spacing */
+.hero-btn-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.hero-btn-group .btn {
+  min-width: 120px;
+}
+
+.hero-btn-group .btn-outline {
+  background-color: var(--white);
+  color: var(--army-blue);
+  border: 2px solid var(--army-blue);
+}
+
+.hero-btn-group .btn-outline:hover {
+  background-color: var(--off-white);
+  color: var(--army-blue-dark);
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;

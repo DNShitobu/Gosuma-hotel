@@ -1,14 +1,38 @@
+.currency-selector {
+  min-width: 0;
+}
+
 .currency-selector select {
-  padding: 8px 12px;
+  padding: 8px 10px;
   border: 1px solid var(--light-gray);
   border-radius: 4px;
   background-color: var(--white);
   color: var(--black);
   font-size: 0.9rem;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.currency-selector select:hover {
+  border-color: var(--army-blue);
 }
 
 .currency-selector select:focus {
   outline: none;
   border-color: var(--army-blue);
+  box-shadow: 0 0 4px rgba(75, 83, 32, 0.3);
+}
+
+@media (max-width: 768px) {
+  .currency-selector select {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .currency-selector select {
+    font-size: 0.8rem;
+    padding: 5px 6px;
+  }
 }

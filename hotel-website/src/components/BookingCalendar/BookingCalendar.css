@@ -1,22 +1,22 @@
 .booking-calendar {
   background-color: var(--white);
-  padding: 80px 0;
+  padding: 32px 0 24px 0;
 }
 
 .calendar-controls {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .calendar-controls select {
-  padding: 12px 20px;
-  font-size: 1rem;
+  padding: 8px 12px;
+  font-size: 0.95rem;
   border: 1px solid var(--light-gray);
   border-radius: 4px;
   background: var(--white);
   color: var(--black);
   cursor: pointer;
-  min-width: 200px;
+  min-width: 120px;
 }
 
 .calendar-controls select:focus {
@@ -25,11 +25,11 @@
 }
 
 .calendar-wrapper {
-  max-width: 600px;
+  max-width: 420px;
   margin: 0 auto;
   background: var(--off-white);
   border-radius: 8px;
-  padding: 25px;
+  padding: 12px 8px 16px 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -37,12 +37,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .calendar-header h3 {
   color: var(--army-blue);
-  font-size: 1.3rem;
+  font-size: 1.05rem;
 }
 
 .nav-btn {
@@ -65,22 +65,22 @@
 .calendar-weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  margin-bottom: 10px;
+  gap: 3px;
+  margin-bottom: 4px;
 }
 
 .weekday {
   text-align: center;
   font-weight: 600;
   color: var(--gray);
-  font-size: 0.85rem;
-  padding: 10px 0;
+  font-size: 0.75rem;
+  padding: 6px 0;
 }
 
 .calendar-days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  gap: 3px;
 }
 
 .calendar-day {
@@ -90,7 +90,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   position: relative;
 }
 
@@ -121,23 +121,23 @@
 .calendar-legend {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
-  padding-top: 15px;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 6px;
   border-top: 1px solid var(--light-gray);
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
+  gap: 4px;
+  font-size: 0.75rem;
   color: var(--gray);
 }
 
 .legend-dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 2px;
 }
 
@@ -151,15 +151,15 @@
 
 .calendar-cta {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 12px;
 }
 
 @media (max-width: 576px) {
   .calendar-day {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
-  
   .calendar-wrapper {
-    padding: 15px;
+    padding: 6px;
+    max-width: 98vw;
   }
 }
