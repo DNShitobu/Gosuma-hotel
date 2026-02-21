@@ -1,0 +1,120 @@
+.location {
+  background-color: var(--off-white);
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-card {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3 {
+  color: var(--army-blue);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.info-card h4 {
+  color: var(--army-blue);
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  color: var(--gray);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.info-card ul {
+  list-style: none;
+}
+
+.info-card ul li {
+  color: var(--gray);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.info-card ul li:last-child {
+  border-bottom: none;
+}
+
+.map-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  min-height: 400px;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  background: linear-gradient(135deg, var(--army-blue) 0%, var(--army-blue-light) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.map-placeholder span {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.map-placeholder p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.map-placeholder small {
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.map-placeholder .btn-directions {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #fff;
+  color: var(--army-blue);
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.map-placeholder .btn-directions:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .location-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .map-container {
+    min-height: 300px;
+  }
+  
+  .map-placeholder {
+    min-height: 300px;
+  }
+}

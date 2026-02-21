@@ -1,0 +1,168 @@
+.virtual-tour-section {
+  padding: 60px 20px;
+  background: var(--bg-primary);
+}
+
+.virtual-tour-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.virtual-tour-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.virtual-tour-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.virtual-tour-section .tour-viewer {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.virtual-tour-section .main-view {
+  position: relative;
+  height: 500px;
+}
+
+.virtual-tour-section .main-view img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.virtual-tour-section .view-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 30px 20px 20px;
+  color: #fff;
+}
+
+.virtual-tour-section .view-info h3 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.virtual-tour-section .view-info p {
+  opacity: 0.9;
+}
+
+.virtual-tour-section .tour-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.virtual-tour-section .nav-btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.virtual-tour-section .nav-btn:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+.virtual-tour-section .counter {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.virtual-tour-section .thumbnail-strip {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  overflow-x: auto;
+}
+
+.virtual-tour-section .thumbnail {
+  flex-shrink: 0;
+  width: 100px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+}
+
+.virtual-tour-section .thumbnail.active {
+  border-color: var(--primary);
+}
+
+.virtual-tour-section .thumbnail img {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+}
+
+.virtual-tour-section .thumbnail span {
+  display: block;
+  padding: 5px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.virtual-tour-section .tour-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.virtual-tour-section .feature {
+  text-align: center;
+  padding: 25px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+}
+
+.virtual-tour-section .feature .icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.virtual-tour-section .feature h4 {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.virtual-tour-section .feature p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .virtual-tour-section .main-view {
+    height: 350px;
+  }
+  
+  .virtual-tour-section .tour-features {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,122 @@
+.room-modal {
+  background: var(--white);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.room-modal .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-modal .close-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-image {
+  height: 300px;
+  overflow: hidden;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-content {
+  padding: 30px;
+}
+
+.modal-content h2 {
+  color: var(--army-blue);
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.room-type {
+  text-transform: capitalize;
+  color: var(--gray);
+  margin-bottom: 15px;
+}
+
+.room-desc {
+  color: var(--black);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.room-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: var(--off-white);
+  border-radius: 8px;
+}
+
+.detail-item {
+  text-align: center;
+}
+
+.detail-item .label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 5px;
+}
+
+.detail-item .value {
+  font-weight: 600;
+  color: var(--army-blue);
+}
+
+.room-amenities {
+  margin-bottom: 25px;
+}
+
+.room-amenities h4 {
+  color: var(--army-blue);
+  margin-bottom: 15px;
+}
+
+.amenities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal-loading {
+  padding: 60px;
+  text-align: center;
+  color: var(--gray);
+}
+
+@media (max-width: 576px) {
+  .room-details {
+    grid-template-columns: 1fr;
+  text-align: center;
+  }
+  
+  .modal-image {
+    height: 200px;
+  }
+}

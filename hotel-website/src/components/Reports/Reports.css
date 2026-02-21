@@ -1,0 +1,323 @@
+.reports-section {
+  padding: 60px 20px;
+  background: var(--bg-primary);
+}
+
+.reports-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reports-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.reports-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.reports-section .reports-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+.reports-section .reports-toolbar select {
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.reports-section .kpi-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.reports-section .kpi-card {
+  background: var(--bg-secondary);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.reports-section .kpi-label {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.reports-section .kpi-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.reports-section .kpi-change {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.reports-section .kpi-change.positive {
+  background: #d4edda;
+  color: #155724;
+}
+
+.reports-section .kpi-change.negative {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.reports-section .report-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reports-section .report-tabs button {
+  padding: 12px 25px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+}
+
+.reports-section .report-tabs button.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.reports-section .report-content {
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.reports-section .report-content h3 {
+  color: var(--text-primary);
+  margin-bottom: 25px;
+}
+
+.reports-section .bar-chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 250px;
+  padding-top: 30px;
+}
+
+.reports-section .bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.reports-section .bar {
+  width: 40px;
+  background: var(--primary);
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  min-height: 20px;
+}
+
+.reports-section .bar-value {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.reports-section .bar-label {
+  margin-top: 10px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.reports-section .line-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 200px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.reports-section .line-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.reports-section .point {
+  position: relative;
+}
+
+.reports-section .point::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: block;
+}
+
+.reports-section .point-value {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.reports-section .point-label {
+  margin-top: 15px;
+  color: var(--text-secondary);
+}
+
+.reports-section .sources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.reports-section .source-card {
+  background: var(--bg-primary);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.reports-section .source-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.reports-section .source-header h4 {
+  color: var(--text-primary);
+}
+
+.reports-section .percentage {
+  background: var(--primary);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.reports-section .progress-bar {
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.reports-section .progress-bar .progress {
+  height: 100%;
+  background: var(--primary);
+}
+
+.reports-section .source-stats {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.reports-section .performance-table,
+.reports-section .daily-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reports-section .performance-table th,
+.reports-section .performance-table td,
+.reports-section .daily-table th,
+.reports-section .daily-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reports-section .performance-table th,
+.reports-section .daily-table th {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.reports-section .performance-table td,
+.reports-section .daily-table td {
+  color: var(--text-secondary);
+}
+
+.reports-section .occupancy-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reports-section .mini-progress {
+  width: 80px;
+  height: 8px;
+  background: var(--bg-primary);
+  border-radius: 4px;
+}
+
+.reports-section .mini-bar {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+.reports-section .check-in,
+.reports-section .check-out {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.reports-section .check-in {
+  background: #d4edda;
+  color: #155724;
+}
+
+.reports-section .check-out {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.reports-section .daily-operations h3 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .reports-section .kpi-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

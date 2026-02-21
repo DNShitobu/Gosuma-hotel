@@ -1,0 +1,162 @@
+.attractions-section {
+  padding: 60px 20px;
+  background: var(--bg-secondary);
+}
+
+.attractions-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.attractions-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.attractions-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.attractions-section .attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.attractions-section .attraction-card {
+  background: var(--bg-primary);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.attractions-section .attraction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.attractions-section .attraction-image {
+  position: relative;
+  height: 180px;
+}
+
+.attractions-section .attraction-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attractions-section .category-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--primary);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.attractions-section .attraction-content {
+  padding: 20px;
+}
+
+.attractions-section .attraction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.attractions-section .attraction-header h3 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.attractions-section .rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.attractions-section .description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.attractions-section .attraction-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.attractions-section .distance {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.attractions-section .directions-btn {
+  padding: 8px 16px;
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.attractions-section .directions-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.attractions-section .attractions-map {
+  background: var(--bg-primary);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+
+.attractions-section .attractions-map h3 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.attractions-section .map-placeholder {
+  background: var(--bg-secondary);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.attractions-section .map-placeholder span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.attractions-section .map-placeholder p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.attractions-section .map-placeholder .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}

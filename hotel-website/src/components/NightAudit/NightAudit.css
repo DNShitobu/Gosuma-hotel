@@ -1,0 +1,260 @@
+.nightaudit-section {
+  padding: 60px 20px;
+  background: var(--bg-primary);
+}
+
+.nightaudit-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nightaudit-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.nightaudit-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.nightaudit-section .audit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+}
+
+.nightaudit-section .date-selector {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nightaudit-section .date-selector label {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.nightaudit-section .date-selector input {
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.nightaudit-section .btn-run {
+  padding: 12px 30px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nightaudit-section .btn-run:disabled {
+  opacity: 0.7;
+}
+
+.nightaudit-section .audit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.nightaudit-section .audit-card {
+  background: var(--bg-secondary);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.nightaudit-section .audit-card.wide {
+  grid-column: span 2;
+}
+
+.nightaudit-section .audit-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nightaudit-section .room-status {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.nightaudit-section .status-item {
+  text-align: center;
+  padding: 15px;
+  background: var(--bg-primary);
+  border-radius: 8px;
+}
+
+.nightaudit-section .status-item .value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.nightaudit-section .status-item .label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.nightaudit-section .occupancy-rate {
+  text-align: center;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nightaudit-section .movements {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nightaudit-section .movement {
+  text-align: center;
+}
+
+.nightaudit-section .movement .icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.nightaudit-section .movement .count {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.nightaudit-section .revenue-table {
+  width: 100%;
+}
+
+.nightaudit-section .revenue-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.nightaudit-section .revenue-table td:last-child {
+  text-align: right;
+}
+
+.nightaudit-section .revenue-table tr.total td {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.2rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.nightaudit-section .payment-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nightaudit-section .payment-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: var(--bg-primary);
+  border-radius: 8px;
+}
+
+.nightaudit-section .payment-item .method {
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.nightaudit-section .payment-item .amount {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nightaudit-section .adjustments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nightaudit-section .adjustment {
+  padding: 12px;
+  background: var(--bg-primary);
+  border-radius: 8px;
+}
+
+.nightaudit-section .adjustment .type {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-right: 10px;
+}
+
+.nightaudit-section .adjustment .amount {
+  font-weight: 600;
+}
+
+.nightaudit-section .adjustment .amount.positive {
+  color: #27ae60;
+}
+
+.nightaudit-section .adjustment .amount.negative {
+  color: #e74c3c;
+}
+
+.nightaudit-section .adjustment .reason {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.nightaudit-section .audit-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.nightaudit-section .btn-primary,
+.nightaudit-section .btn-secondary {
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nightaudit-section .btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+}
+
+.nightaudit-section .btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 900px) {
+  .nightaudit-section .audit-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nightaudit-section .audit-card.wide {
+    grid-column: span 1;
+  }
+}

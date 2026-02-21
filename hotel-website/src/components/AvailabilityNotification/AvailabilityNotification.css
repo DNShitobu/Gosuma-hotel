@@ -1,0 +1,92 @@
+.availability-notification {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.availability-notification .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.availability-notification .section-title {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.availability-notification .section-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.availability-notification .notify-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.availability-notification .form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.availability-notification .form-group input,
+.availability-notification .form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.availability-notification .btn {
+  padding: 14px 30px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.availability-notification .btn:disabled {
+  opacity: 0.7;
+}
+
+.availability-notification .success-message {
+  padding: 40px;
+  background: var(--bg-primary);
+  border-radius: 12px;
+}
+
+.availability-notification .success-message span {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 60px;
+  margin-bottom: 15px;
+}
+
+.availability-notification .success-message h3 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.availability-notification .success-message p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.availability-notification .all-available {
+  color: var(--primary);
+  font-size: 1.2rem;
+  padding: 30px;
+  background: var(--bg-primary);
+  border-radius: 8px;
+}

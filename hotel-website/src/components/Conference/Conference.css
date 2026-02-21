@@ -1,0 +1,196 @@
+.conference-section {
+  padding: 60px 20px;
+  background: var(--bg-secondary);
+}
+
+.conference-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.conference-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.conference-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.conference-section .conference-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.conference-section .conference-tabs button {
+  padding: 12px 25px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.conference-section .conference-tabs button.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.conference-section .venues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.conference-section .venue-card {
+  background: var(--bg-primary);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.conference-section .venue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.conference-section .venue-header h3 {
+  color: var(--text-primary);
+}
+
+.conference-section .capacity {
+  background: var(--bg-secondary);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.conference-section .size {
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.conference-section .rate {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.conference-section .equipment {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.conference-section .equip-tag {
+  background: var(--bg-secondary);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.conference-section .btn-book {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.conference-section .bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.conference-section .booking-card {
+  background: var(--bg-primary);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.conference-section .booking-info h4 {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.conference-section .client {
+  color: var(--text-secondary);
+}
+
+.conference-section .booking-details {
+  flex: 1;
+}
+
+.conference-section .booking-details p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.conference-section .status {
+  padding: 6px 15px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+}
+
+.conference-section .status.confirmed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.conference-section .status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.conference-section .booking-form {
+  background: var(--bg-primary);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.conference-section .booking-form h3 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.conference-section .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.conference-section .form-grid input,
+.conference-section .form-grid select {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.conference-section .btn-submit {
+  padding: 12px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}

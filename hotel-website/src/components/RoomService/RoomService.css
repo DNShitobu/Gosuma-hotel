@@ -1,0 +1,255 @@
+.room-service-section {
+  padding: 60px 20px;
+  background: var(--bg-secondary);
+}
+
+.room-service-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.room-service-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.room-service-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.room-service-section .service-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+}
+
+.room-service-section .category-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.room-service-section .category-tabs button {
+  padding: 10px 20px;
+  background: var(--bg-primary);
+  border: none;
+  border-radius: 20px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.room-service-section .category-tabs button.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.room-service-section .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.room-service-section .menu-item {
+  background: var(--bg-primary);
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.room-service-section .menu-item:hover {
+  transform: scale(1.02);
+}
+
+.room-service-section .menu-item h4 {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.room-service-section .menu-item p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.room-service-section .menu-item .price {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.room-service-section .cart-area {
+  background: var(--bg-primary);
+  border-radius: 12px;
+  padding: 25px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.room-service-section .cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.room-service-section .cart-header h3 {
+  color: var(--text-primary);
+}
+
+.room-service-section .item-count {
+  background: var(--primary);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.room-service-section .cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.room-service-section .empty {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 40px 0;
+}
+
+.room-service-section .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.room-service-section .item-details h4 {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+.room-service-section .item-details .item-price {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.room-service-section .qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.room-service-section .qty-controls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  cursor: pointer;
+}
+
+.room-service-section .cart-footer {
+  border-top: 2px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.room-service-section .total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.room-service-section .total span:first-child {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.room-service-section .total-amount {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.room-service-section .btn-order {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.room-service-section .btn-order:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.room-service-section .delivery-info {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.room-service-section .delivery-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.room-service-section .order-success {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--bg-primary);
+  border-radius: 16px;
+}
+
+.room-service-section .order-success .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.room-service-section .order-success h2 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.room-service-section .order-success p {
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+}
+
+.room-service-section .order-success .btn {
+  padding: 14px 35px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .room-service-section .service-layout {
+    grid-template-columns: 1fr;
+  }
+}

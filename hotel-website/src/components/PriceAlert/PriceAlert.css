@@ -1,0 +1,94 @@
+.price-alert-section {
+  padding: 60px 20px;
+  background: var(--bg-secondary);
+}
+
+.price-alert-section .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.price-alert-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.price-alert-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.price-alert-section .price-alert-form {
+  background: var(--bg-primary);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.price-alert-section .form-group {
+  margin-bottom: 20px;
+}
+
+.price-alert-section label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.price-alert-section input,
+.price-alert-section select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.price-alert-section .btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.price-alert-section .btn:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.price-alert-section .btn:disabled {
+  opacity: 0.7;
+}
+
+.price-alert-section .price-alert-success {
+  text-align: center;
+  padding: 40px;
+  background: var(--bg-primary);
+  border-radius: 12px;
+}
+
+.price-alert-section .price-alert-success .icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.price-alert-section .price-alert-success h3 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.price-alert-section .price-alert-success p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}

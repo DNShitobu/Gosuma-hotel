@@ -1,0 +1,60 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Standard Room",
+      "type": "standard",
+      "price": 80,
+      "capacity": 2,
+      "description": "Comfortable and affordable accommodation with essential amenities",
+      "amenities": [
+        "WiFi",
+        "TV",
+        "AC",
+        "Safe",
+        "Coffee Maker"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80",
+      "totalCount": 30
+    },
+    {
+      "id": 2,
+      "name": "Deluxe Room",
+      "type": "deluxe",
+      "price": 120,
+      "capacity": 3,
+      "description": "Spacious rooms with modern amenities and work desk",
+      "amenities": [
+        "WiFi",
+        "TV",
+        "AC",
+        "Safe",
+        "Minibar",
+        "Work Desk"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80",
+      "totalCount": 50
+    },
+    {
+      "id": 3,
+      "name": "Executive Suite",
+      "type": "suite",
+      "price": 180,
+      "capacity": 4,
+      "description": "Luxury suite with premium features, living area and bathtub",
+      "amenities": [
+        "WiFi",
+        "TV",
+        "AC",
+        "Safe",
+        "Minibar",
+        "Living Area",
+        "Bathtub"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80",
+      "totalCount": 21
+    }
+  ],
+  "bookings": [],
+  "auditLog": []
+}

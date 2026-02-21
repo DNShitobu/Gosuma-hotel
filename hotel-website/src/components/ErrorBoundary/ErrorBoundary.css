@@ -1,0 +1,29 @@
+.error-boundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 40px;
+  text-align: center;
+}
+
+.error-content {
+  max-width: 500px;
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.error-content h2 {
+  color: var(--army-blue);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.error-content p {
+  color: var(--gray);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}

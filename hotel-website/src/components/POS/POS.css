@@ -1,0 +1,311 @@
+.pos-section {
+  padding: 60px 20px;
+  background: var(--bg-primary);
+}
+
+.pos-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pos-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.pos-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.pos-section .pos-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.pos-section .order-type-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pos-section .order-type-selector button {
+  flex: 1;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pos-section .order-type-selector button.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.pos-section .room-input {
+  margin-bottom: 20px;
+}
+
+.pos-section .room-input input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.pos-section .category-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.pos-section .category-tabs button {
+  padding: 10px 20px;
+  background: var(--bg-secondary);
+  border: none;
+  border-radius: 20px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.pos-section .category-tabs button.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.pos-section .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.pos-section .menu-item {
+  background: var(--bg-secondary);
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.pos-section .menu-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pos-section .menu-item h4 {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.pos-section .menu-item p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.pos-section .menu-item .price {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.pos-section .cart-section {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.pos-section .cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pos-section .cart-header h3 {
+  color: var(--text-primary);
+}
+
+.pos-section .cart-count {
+  background: var(--primary);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.pos-section .cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.pos-section .empty-cart {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 40px 0;
+}
+
+.pos-section .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pos-section .cart-item .item-info h4 {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.pos-section .cart-item .item-price {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.pos-section .item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pos-section .item-controls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  cursor: pointer;
+}
+
+.pos-section .cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-top: 2px solid var(--border-color);
+  margin-bottom: 15px;
+}
+
+.pos-section .cart-total span:first-child {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.pos-section .total-amount {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.pos-section .btn-place-order {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pos-section .btn-place-order:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pos-section .active-orders h3 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.pos-section .orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.pos-section .order-card {
+  background: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pos-section .order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pos-section .order-id {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pos-section .order-type {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.pos-section .order-type.dine-in { background: #e3f2fd; color: #1976d2; }
+.pos-section .order-type.room-service { background: #f3e5f5; color: #7b1fa2; }
+.pos-section .order-type.takeout { background: #fff3e0; color: #f57c00; }
+
+.pos-section .order-location {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pos-section .order-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.pos-section .order-items span {
+  background: var(--bg-primary);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.pos-section .order-time {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.pos-section .order-actions select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .pos-section .pos-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,254 @@
+.housekeeping-section {
+  padding: 60px 20px;
+  background: var(--bg-secondary);
+}
+
+.housekeeping-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.housekeeping-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.housekeeping-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.housekeeping-section .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.housekeeping-section .stat-card {
+  background: var(--bg-primary);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  border-left: 4px solid var(--primary);
+}
+
+.housekeeping-section .stat-card.clean { border-left-color: #27ae60; }
+.housekeeping-section .stat-card.dirty { border-left-color: #e74c3c; }
+.housekeeping-section .stat-card.progress { border-left-color: #f39c12; }
+
+.housekeeping-section .stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.housekeeping-section .stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.housekeeping-section .housekeeping-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.housekeeping-section .tab {
+  padding: 12px 25px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+}
+
+.housekeeping-section .tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.housekeeping-section .rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.housekeeping-section .room-status-card {
+  background: var(--bg-primary);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.housekeeping-section .room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.housekeeping-section .room-header h4 {
+  color: var(--text-primary);
+}
+
+.housekeeping-section .status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.housekeeping-section .room-type {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.housekeeping-section .assigned-to,
+.housekeeping-section .last-cleaned {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.housekeeping-section .room-actions {
+  margin-top: 12px;
+}
+
+.housekeeping-section .room-actions select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.housekeeping-section .staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.housekeeping-section .staff-card {
+  background: var(--bg-primary);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.housekeeping-section .staff-avatar {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 15px;
+}
+
+.housekeeping-section .staff-card h4 {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.housekeeping-section .shift {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.housekeeping-section .rooms-assigned {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.housekeeping-section .btn-small {
+  padding: 8px 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.housekeeping-section .tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.housekeeping-section .task-item {
+  background: var(--bg-primary);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.housekeeping-section .task-info h4 {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.housekeeping-section .task-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.housekeeping-section .task-assignee {
+  color: var(--text-secondary);
+}
+
+.housekeeping-section .priority {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.housekeeping-section .priority.high {
+  background: #fee;
+  color: #e74c3c;
+}
+
+.housekeeping-section .priority.normal {
+  background: #eef;
+  color: #3498db;
+}
+
+.housekeeping-section .btn-complete {
+  margin-left: auto;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .housekeeping-section .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .housekeeping-section .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .housekeeping-section .btn-complete {
+    margin-left: 0;
+    width: 100%;
+  }
+}

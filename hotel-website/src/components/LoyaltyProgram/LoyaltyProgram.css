@@ -1,0 +1,249 @@
+.loyalty-section {
+  padding: 60px 20px;
+  background: var(--bg-secondary);
+}
+
+.loyalty-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.loyalty-section .section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.loyalty-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.loyalty-section .join-program {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: var(--bg-primary);
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.loyalty-section .program-info h3 {
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.loyalty-section .program-info p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.loyalty-section .perks-list {
+  list-style: none;
+  padding: 0;
+}
+
+.loyalty-section .perks-list li {
+  padding: 8px 0;
+  color: var(--text-primary);
+}
+
+.loyalty-section .join-form {
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.loyalty-section .join-form h4 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.loyalty-section .join-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.loyalty-section .join-form .btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.loyalty-section .member-dashboard {
+  display: grid;
+  gap: 30px;
+}
+
+.loyalty-section .member-card {
+  background: var(--bg-primary);
+  padding: 30px;
+  border-radius: 16px;
+  border-left: 5px solid;
+}
+
+.loyalty-section .card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.loyalty-section .tier-badge {
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.loyalty-section .card-header h3 {
+  color: var(--text-primary);
+}
+
+.loyalty-section .points-display {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.loyalty-section .points {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.loyalty-section .points-display .label {
+  color: var(--text-secondary);
+}
+
+.loyalty-section .progress-bar {
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.loyalty-section .progress {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s;
+}
+
+.loyalty-section .progress-section p {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.loyalty-section .tiers-overview h4,
+.loyalty-section .rewards-catalogue h4 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.loyalty-section .tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.loyalty-section .tier-card {
+  background: var(--bg-primary);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.loyalty-section .tier-card.current {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.loyalty-section .tier-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.loyalty-section .tier-card h5 {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.loyalty-section .tier-points {
+  color: var(--text-secondary);  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.loyalty-section .tier-card ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.loyalty-section .rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.loyalty-section .reward {
+  background: var(--bg-primary);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.loyalty-section .reward .icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.loyalty-section .reward h5 {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.loyalty-section .reward p {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.loyalty-section .btn-small {
+  padding: 8px 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .loyalty-section .join-program {
+    grid-template-columns: 1fr;
+  }
+  
+  .loyalty-section .tiers-grid,
+  .loyalty-section .rewards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
