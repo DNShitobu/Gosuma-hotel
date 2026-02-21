@@ -1,4 +1,4 @@
-# Airport View Hotel
+# Gosuma Hotel
 
 A modern hotel booking website with full-stack functionality, featuring international white and army blue brand colors.
 
@@ -25,6 +25,7 @@ A modern hotel booking website with full-stack functionality, featuring internat
 ### Installation
 
 1. **Install Frontend Dependencies**
+
    ```bash
    cd hotel-website
    npm install
@@ -39,10 +40,12 @@ A modern hotel booking website with full-stack functionality, featuring internat
 ### Running the Application
 
 1. **Start the Backend Server** (Terminal 1)
+
    ```bash
    cd hotel-website/backend
    npm start
    ```
+
    Backend runs on http://localhost:3001
 
 2. **Start the Frontend** (Terminal 2)
@@ -81,24 +84,24 @@ hotel-website/
 
 ## API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/rooms` | List all rooms |
-| GET | `/api/rooms/:id` | Get room details |
-| POST | `/api/bookings` | Create booking |
-| GET | `/api/bookings/confirmation/:id` | Get booking confirmation |
-| GET | `/api/availability` | Check availability |
-| GET | `/api/admin/bookings` | List all bookings (admin) |
-| PUT | `/api/admin/bookings/:id/status` | Update booking status |
-| GET | `/api/admin/stats` | Get hotel statistics |
+| Method | Endpoint                         | Description               |
+| ------ | -------------------------------- | ------------------------- |
+| GET    | `/api/rooms`                     | List all rooms            |
+| GET    | `/api/rooms/:id`                 | Get room details          |
+| POST   | `/api/bookings`                  | Create booking            |
+| GET    | `/api/bookings/confirmation/:id` | Get booking confirmation  |
+| GET    | `/api/availability`              | Check availability        |
+| GET    | `/api/admin/bookings`            | List all bookings (admin) |
+| PUT    | `/api/admin/bookings/:id/status` | Update booking status     |
+| GET    | `/api/admin/stats`               | Get hotel statistics      |
 
 ## Room Types
 
-| Room | Price (USD) | Capacity |
-|------|-------------|----------|
-| Standard Room | $80/night | 2 Adults |
-| Deluxe Room | $120/night | 2 Adults, 1 Child |
-| Executive Suite | $180/night | 2 Adults, 2 Children |
+| Room            | Price (USD) | Capacity             |
+| --------------- | ----------- | -------------------- |
+| Standard Room   | $80/night   | 2 Adults             |
+| Deluxe Room     | $120/night  | 2 Adults, 1 Child    |
+| Executive Suite | $180/night  | 2 Adults, 2 Children |
 
 ## Currency Support
 
