@@ -8,6 +8,8 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import LiveChat from './components/LiveChat/LiveChat';
 import AvailabilityNotification from './components/AvailabilityNotification/AvailabilityNotification';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 
 // Page imports
 import HomePage from './pages/HomePage';
@@ -49,6 +51,8 @@ function App() {
                   <Route path="/reviews" element={<ReviewsPage />} />
                   <Route path="/gallery" element={<GalleryPage />} />
                   <Route path="/admin" element={<AdminPage />} />
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/signup" element={<SignupPage />} />
                 </Routes>
                 <Footer />
                 <LiveChat />
